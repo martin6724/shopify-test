@@ -1,0 +1,89 @@
+
+<section class="hero-container">
+  <div class="overlay">
+  <div class="hero-copy">
+    <div class="hero hero-copy-{{ section.settings.horizontal_alignment }}">
+    {%- if section.settings.title != blank -%}
+      <h1 class="hero-title">{{ section.settings.title | escape }}</h1>
+    {%- endif -%}
+    {%- if section.settings.copy != blank -%}
+      <p class="hero-detail">{{ section.settings.copy }}</p>
+    {%- endif -%}
+    {%- if section.settings.cta-url != blank -%}
+      <a href="{{ section.settings.cta-url }}" class="button-primary">{{ section.settings.cta-text }}</a>
+    {% endif %}
+    </div>
+  </div>
+  </div>
+
+</section>
+
+<style>
+
+.hero-container {
+  background-image: url('{{ section.settings.background-image | img_url: '1400x' }}');
+  background-position: {{ section.settings.bg-alignment }};
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-container {
+    background-image: url('{{ section.settings.mobile-image | img_url: '360x' }}');
+  }
+}
+
+</style>
+
+{% schema %}
+  {
+    "name": "Hero Section with Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "copy",
+        "label": "Copy",
+        "default": "In lorem leo, sodales et ullamcorper tempor, facilisis id nibh. Maecenas nibh risus, rutrum nec tellus sed, pharetra gravida nulla. Proin imperdiet"
+      },
+      {
+      "type": "select",
+         "id": "horizontal_alignment",
+         "options": [
+            { "value": "left", "label": "Left"},
+            { "value": "center", "label": "Center"},
+            { "value": "right", "label": "Right"}
+         ],
+         "label": "Text Alignment"
+      },
+      {
+        "type": "image_picker",
+        "id": "background-image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile-image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "cta-text",
+        "label": "CTA Text",
+        "default": "Read More"
+      },
+      {
+        "type": "url",
+        "id": "cta-url",
+        "label": "CTA URL"
+      }
+    ],
+    "presets": [{
+        "name": "Hero Image",
+        "category": "Test Custom Components"
+    }]
+  }
+{% endschema %}

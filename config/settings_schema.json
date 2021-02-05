@@ -1,0 +1,84 @@
+[
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo Options"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background (example)",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color (example)",
+        "default": "#cccccc"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_logo",
+        "label": "Use Custom Logo?"
+      },
+      {
+        "type": "image",
+        "id": "logo.png",
+        "label": "Custom Logo",
+        "max-width": 940,
+        "max-height": 300
+      },
+      {
+        "type": "paragraph",
+        "content": "Maximum logo dimensions are 940px wide by 300px high.Your uploaded file will be resized to fit within those constraints.Need a full-width banner? Upload an image with a width of 940px, and a height of 300px or less."
+      }
+    ]
+  },
+  {
+  "name": "Font Styles",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Headings"
+    },
+    {
+      "type": "font_picker",
+      "id": "header_font",
+      "label": "Font",
+      "default": "work_sans_n6"
+    },
+    {
+      "type": "range",
+      "id": "header_base_size",
+      "label": "Heading base size",
+      "default": 46,
+      "min": 20,
+      "max": 56,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Body text"
+    },
+    {
+      "type": "font_picker",
+      "id": "base_font",
+      "label": "Font",
+      "default": "work_sans_n4"
+    },
+    {
+      "type": "range",
+      "id": "base_size",
+      "label": "Base size",
+      "default": 24,
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+}
+]
