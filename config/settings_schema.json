@@ -47,7 +47,7 @@
       "type": "font_picker",
       "id": "header_font",
       "label": "Font",
-      "default": "work_sans_n6"
+      "default": "roboto_n4"
     },
     {
       "type": "range",
@@ -67,7 +67,7 @@
       "type": "font_picker",
       "id": "base_font",
       "label": "Font",
-      "default": "work_sans_n4"
+      "default": "roboto_n4"
     },
     {
       "type": "range",
